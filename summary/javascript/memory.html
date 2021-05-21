@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>内存管理 | 温故而知新，可以为师矣</title>
+    <meta name="generator" content="VuePress 1.8.2">
+    
+    <meta name="description" content="blog, web, javascript, html, css, node, web前端">
+    
+    <link rel="preload" href="/assets/css/0.styles.c8e23b86.css" as="style"><link rel="preload" href="/assets/js/app.9c407d6c.js" as="script"><link rel="preload" href="/assets/js/2.52ef31b3.js" as="script"><link rel="preload" href="/assets/js/43.e1d96ad0.js" as="script"><link rel="prefetch" href="/assets/js/10.e161c387.js"><link rel="prefetch" href="/assets/js/11.bd77bcda.js"><link rel="prefetch" href="/assets/js/12.be74ad2a.js"><link rel="prefetch" href="/assets/js/13.fdb0dde0.js"><link rel="prefetch" href="/assets/js/14.e93cd995.js"><link rel="prefetch" href="/assets/js/15.70a34434.js"><link rel="prefetch" href="/assets/js/16.12238424.js"><link rel="prefetch" href="/assets/js/17.f494825a.js"><link rel="prefetch" href="/assets/js/18.abdb8db0.js"><link rel="prefetch" href="/assets/js/19.92a4e713.js"><link rel="prefetch" href="/assets/js/20.bdc128c9.js"><link rel="prefetch" href="/assets/js/21.ff60d07f.js"><link rel="prefetch" href="/assets/js/22.aef6792f.js"><link rel="prefetch" href="/assets/js/23.5cd5a280.js"><link rel="prefetch" href="/assets/js/24.b1c22b19.js"><link rel="prefetch" href="/assets/js/25.fb4f7441.js"><link rel="prefetch" href="/assets/js/26.c55d1275.js"><link rel="prefetch" href="/assets/js/27.293170a1.js"><link rel="prefetch" href="/assets/js/28.b213cd75.js"><link rel="prefetch" href="/assets/js/29.d264ec24.js"><link rel="prefetch" href="/assets/js/3.60832a0f.js"><link rel="prefetch" href="/assets/js/30.302235ce.js"><link rel="prefetch" href="/assets/js/31.26a90bcc.js"><link rel="prefetch" href="/assets/js/32.9b62945b.js"><link rel="prefetch" href="/assets/js/33.8c9bc38c.js"><link rel="prefetch" href="/assets/js/34.200a24bb.js"><link rel="prefetch" href="/assets/js/35.dbcaaae3.js"><link rel="prefetch" href="/assets/js/36.3d6c6d48.js"><link rel="prefetch" href="/assets/js/37.5aead10b.js"><link rel="prefetch" href="/assets/js/38.09a018df.js"><link rel="prefetch" href="/assets/js/39.77eb9436.js"><link rel="prefetch" href="/assets/js/4.6230b7f5.js"><link rel="prefetch" href="/assets/js/40.55a64ce7.js"><link rel="prefetch" href="/assets/js/41.d681c157.js"><link rel="prefetch" href="/assets/js/42.af270b06.js"><link rel="prefetch" href="/assets/js/44.29cce865.js"><link rel="prefetch" href="/assets/js/45.d2f8a1d0.js"><link rel="prefetch" href="/assets/js/46.791d6822.js"><link rel="prefetch" href="/assets/js/5.b7462bd8.js"><link rel="prefetch" href="/assets/js/6.0377ba0c.js"><link rel="prefetch" href="/assets/js/7.675c43bb.js"><link rel="prefetch" href="/assets/js/8.c751ea42.js"><link rel="prefetch" href="/assets/js/9.75d6f480.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.c8e23b86.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container no-sidebar"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">温故而知新，可以为师矣</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><a href="/summary/" class="nav-link router-link-active">
+  知识梳理
+</a></div><div class="nav-item"><a href="/blog/" class="nav-link">
+  博客
+</a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><a href="/summary/" class="nav-link router-link-active">
+  知识梳理
+</a></div><div class="nav-item"><a href="/blog/" class="nav-link">
+  博客
+</a></div> <!----></nav>  <!----> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="内存管理"><a href="#内存管理" class="header-anchor">#</a> 内存管理</h1> <blockquote><p>JavaScript是在创建变量（对象，字符串等）时自动进行了分配内存，并且在不断使用它们时“自动”释放，释放的过程称为垃圾回收。</p></blockquote> <h2 id="内存生命周期"><a href="#内存生命周期" class="header-anchor">#</a> 内存生命周期</h2> <blockquote><p>不管什么程序语言，内存生命周期基本是一致的</p></blockquote> <ul><li>分配你需要的内存</li> <li>使用你分配的内存（读、写）</li> <li>不需要时将其释放归还</li></ul> <h2 id="javascript中的内存分配"><a href="#javascript中的内存分配" class="header-anchor">#</a> JavaScript中的内存分配</h2> <ul><li><p>值的初始化：JavaScript在定义变量时就完成了内存分配</p></li> <li><p>通过函数调用分配内存</p> <ul><li>有些函数调用结果是分配对象内存：<code>var date = new Date()</code></li> <li>有些方法是分配新变量或者新对象：<code>var s = 'asdasd'; var s2 = s.substr(0,3); 或者 var a = arr1.concat(arr2)</code></li></ul></li> <li><p>使用值：使用值的过程实际上是对分配的内存进行读取和写入操作。读取或写入可能是一个变量或者一个对象的属性值，甚至传递函数的参数。</p></li></ul> <h2 id="垃圾回收"><a href="#垃圾回收" class="header-anchor">#</a> 垃圾回收</h2> <blockquote><p>当内存不在需要使用时释放，找到哪些分配的内存确实已经不再需要了，并释放出来。</p></blockquote> <ul><li>引用：在内存管理环境中，一个对象如果有访问另一个对象的权限(隐式或显式)就是一个对象引用另一个对象。</li> <li>引用计数垃圾收集：这是最初级别的垃圾收集算法。此算法把“对象是否不再需要”简化为“对象有没有被其它对象引用”。如果是零引用，对象就会被垃圾回收机制回收。
+<ul><li>循环引用：使用此算法有个限制，无法处理循环引用的事例。两个对象相互引用，调用之后没有用了本可以回收，此算法考虑它们互相有至少一次引用，于是不会回收。</li> <li>IE6,7使用引用计数方式对DOM对象进行回收，常常造成对象被循环引用时内存发生泄漏。</li></ul></li> <li>标记-清除算法：这个算法把“对象是否不再需要”简化为“对象是否可以获得”。这个算法比前一个好，因为零引用的对象总是不可获得的，但相反不一定。（现代浏览器中使用的方式是标记清除算法）
+<ul><li>解除了循环引用的限制</li> <li>新的限制：那些无法从根对象查询到的对象都将被清除。实践中很少碰到。</li></ul></li></ul></div> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">Last Updated:</span> <span class="time">5/21/2021, 2:48:29 PM</span></div></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/summary/" class="prev router-link-active">
+        知识梳理
+      </a></span> <!----></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.9c407d6c.js" defer></script><script src="/assets/js/2.52ef31b3.js" defer></script><script src="/assets/js/43.e1d96ad0.js" defer></script>
+  </body>
+</html>

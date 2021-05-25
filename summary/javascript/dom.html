@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>DOM操作 | 温故而知新，可以为师矣</title>
+    <meta name="generator" content="VuePress 1.8.2">
+    
+    <meta name="description" content="blog, web, javascript, html, css, node, web前端">
+    
+    <link rel="preload" href="/assets/css/0.styles.d9b032db.css" as="style"><link rel="preload" href="/assets/js/app.36df9d36.js" as="script"><link rel="preload" href="/assets/js/2.16d71bdf.js" as="script"><link rel="preload" href="/assets/js/41.b455e55e.js" as="script"><link rel="prefetch" href="/assets/js/10.5f5f7580.js"><link rel="prefetch" href="/assets/js/11.5270413f.js"><link rel="prefetch" href="/assets/js/12.0a4806bb.js"><link rel="prefetch" href="/assets/js/13.ee2ff438.js"><link rel="prefetch" href="/assets/js/14.e151e9fc.js"><link rel="prefetch" href="/assets/js/15.0146a681.js"><link rel="prefetch" href="/assets/js/16.d6535893.js"><link rel="prefetch" href="/assets/js/17.9c6953fd.js"><link rel="prefetch" href="/assets/js/18.e06c8033.js"><link rel="prefetch" href="/assets/js/19.24443db4.js"><link rel="prefetch" href="/assets/js/20.28e77151.js"><link rel="prefetch" href="/assets/js/21.e8c4bd55.js"><link rel="prefetch" href="/assets/js/22.f916e534.js"><link rel="prefetch" href="/assets/js/23.cb853f1e.js"><link rel="prefetch" href="/assets/js/24.0ab83c2c.js"><link rel="prefetch" href="/assets/js/25.d1028627.js"><link rel="prefetch" href="/assets/js/26.3eb529d7.js"><link rel="prefetch" href="/assets/js/27.f476b109.js"><link rel="prefetch" href="/assets/js/28.55bd408a.js"><link rel="prefetch" href="/assets/js/29.cd7b10e1.js"><link rel="prefetch" href="/assets/js/3.60832a0f.js"><link rel="prefetch" href="/assets/js/30.78d40eaa.js"><link rel="prefetch" href="/assets/js/31.698b6ad5.js"><link rel="prefetch" href="/assets/js/32.7e7419eb.js"><link rel="prefetch" href="/assets/js/33.4eec745b.js"><link rel="prefetch" href="/assets/js/34.97b4cf40.js"><link rel="prefetch" href="/assets/js/35.51f92a04.js"><link rel="prefetch" href="/assets/js/36.fe40dc77.js"><link rel="prefetch" href="/assets/js/37.afb7ce03.js"><link rel="prefetch" href="/assets/js/38.3fe9bbab.js"><link rel="prefetch" href="/assets/js/39.20af84a8.js"><link rel="prefetch" href="/assets/js/4.8af0ce45.js"><link rel="prefetch" href="/assets/js/40.fc15b277.js"><link rel="prefetch" href="/assets/js/42.d44cde28.js"><link rel="prefetch" href="/assets/js/43.a070ab0c.js"><link rel="prefetch" href="/assets/js/44.0e47b420.js"><link rel="prefetch" href="/assets/js/45.b44b190b.js"><link rel="prefetch" href="/assets/js/46.4d3bccb8.js"><link rel="prefetch" href="/assets/js/47.a10a2f8e.js"><link rel="prefetch" href="/assets/js/48.59f0af89.js"><link rel="prefetch" href="/assets/js/5.f21def4a.js"><link rel="prefetch" href="/assets/js/6.2958d7f8.js"><link rel="prefetch" href="/assets/js/7.de45bb0b.js"><link rel="prefetch" href="/assets/js/8.548f5282.js"><link rel="prefetch" href="/assets/js/9.5415d52c.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.d9b032db.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container no-sidebar"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">温故而知新，可以为师矣</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/summary/" class="nav-link router-link-active">
+  知识梳理
+</a></div><div class="nav-item"><a href="/resume/" class="nav-link">
+  简历
+</a></div><div class="nav-item"><a href="/blog/" class="nav-link">
+  博客
+</a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/summary/" class="nav-link router-link-active">
+  知识梳理
+</a></div><div class="nav-item"><a href="/resume/" class="nav-link">
+  简历
+</a></div><div class="nav-item"><a href="/blog/" class="nav-link">
+  博客
+</a></div> <!----></nav>  <!----> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="dom操作"><a href="#dom操作" class="header-anchor">#</a> DOM操作</h1> <blockquote><p>DOM的定义：W3C 文档对象模型（DOM）是中立于平台和语言的接口，它允许程序和脚本动态地访问、更新文档的内容、结构和样式。</p></blockquote></div> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">Last Updated:</span> <span class="time">5/25/2021, 3:06:08 PM</span></div></footer> <!----> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.36df9d36.js" defer></script><script src="/assets/js/2.16d71bdf.js" defer></script><script src="/assets/js/41.b455e55e.js" defer></script>
+  </body>
+</html>

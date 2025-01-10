@@ -9,7 +9,7 @@ const vitepressConfig = {
   appearance: 'dark',
   lastUpdated: false,
   lang: 'zh-CN',
-  head: [['link', { rel: 'icon', href: '/favicon.ico' }]],
+  head: [['link', { rel: 'icon', href: '/pages/favicon.ico' }]],
   srcDir: './docs',
   themeConfig: {
     nav: false,

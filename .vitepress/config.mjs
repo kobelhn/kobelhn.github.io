@@ -3,7 +3,7 @@ import { withSidebar } from 'vitepress-sidebar'
 import timeline from "vitepress-markdown-timeline";
 
 const vitepressConfig = {
-  base: '/',
+  base: '/pages/',
   title: "Markdown Memoirs",
   description: "Markdown Memoirs",
   appearance: 'dark',

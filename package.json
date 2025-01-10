@@ -1,0 +1,28 @@
+{
+  "name": "vitepress",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "docs:dev": "vitepress dev",
+    "docs:build": "vitepress build",
+    "docs:preview": "vitepress build && vitepress preview --port 15027"
+  },
+  "type": "module",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "canvas-confetti": "^1.9.3",
+    "medium-zoom": "^1.1.0",
+    "vitepress": "^1.5.0",
+    "vitepress-markdown-timeline": "^1.2.2",
+    "vue": "^3.5.13",
+    "xgplayer": "^3.0.20"
+  },
+  "dependencies": {
+    "crypto-js": "^4.2.0",
+    "vitepress-sidebar": "^1.30.2"
+  }
+}

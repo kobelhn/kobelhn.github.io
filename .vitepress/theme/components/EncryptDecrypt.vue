@@ -1,6 +1,7 @@
 <template>
   <div class="secret-container">
     <div class="secret-top">
+      <span style="margin-right: 10px">{{ label || 'Secret Content' }}</span>
       <input class="secret-input" v-model="password" type="password" placeholder="输入密码进行" />
       <button class="secret-btn" @click="decrypt">解密</button>
     </div>
@@ -13,7 +14,8 @@ import { ref } from 'vue'
 import CryptoJS from 'crypto-js'
 
 const props = defineProps<{
-  value: string
+  value: string,
+  label: string
 }>()
 
 const password = ref('')

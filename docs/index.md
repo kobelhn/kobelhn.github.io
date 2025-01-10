@@ -14,8 +14,3 @@ hero:
 ---
 <confetti />
 <HomeUnderLine />
-<explore>
-    <div style="width: 720px; height: 480px">
-        <xg-player url="/static/videos/IU.mov" />
-    </div>
-</explore>

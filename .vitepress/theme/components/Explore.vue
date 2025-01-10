@@ -13,13 +13,13 @@
                 height="100%"
             ></iframe>
           </div>
-          <ul style="flex: 0.3; font-size: 12px" @click.stop>
-            <li>API KEY: sk-F8YHDwXvtX7rww0mFiuhOf7z6CTBDaxGSVmVnaJAzovvPIvm</li>
-            <li>API KEY: sk-4w2EmL0qnblp9rU2bH6Ek7L4CGaXrxNxgFup9UuyQGMPNPDt</li>
-            <li>HOST1: https://api.chatanywhere.com.cn</li>
-            <li>HOST2: https://api.chatanywhere.tech</li>
-            <li>支持：gpt-3.5-turbo, embedding, gpt-4o-mini, gpt-4（每日限制 3 次）</li>
-          </ul>
+          <div style="flex: 0.3; font-size: 12px; padding: 10px" @click.stop>
+            <encrypt-decrypt value="U2FsdGVkX1/bfrloCdg7s4U06f/BPizFXhUEUeAbF7+33OMMUfRu0vK0s/L7PNqwvKBHB34UF+y3JCsOD6Qf1ekiRUQPxh9N03+42qJRnlc=" label="API KEY 1" />
+            <encrypt-decrypt value="U2FsdGVkX19Ooxn0ZG8USBFunapcBNC3BiTqVvpvXX4MhnJRriNEF+5f1xZdd5jUD7KK8arsaw8g9QxLECNuWtJiYoGfWXYwuyLCsktbHbo=" label="API KEY 1" />
+            <div>HOST1: https://api.chatanywhere.com.cn</div>
+            <div>HOST2: https://api.chatanywhere.tech</div>
+            <div>支持：gpt-3.5-turbo, embedding, gpt-4o-mini, gpt-4（每日限制 3 次）</div>
+          </div>
         </div>
       </slot>
     </div>
@@ -27,6 +27,7 @@
 </template>
 
 <script setup>
+import EncryptDecrypt from "./EncryptDecrypt.vue";
 import { ref } from 'vue'
 
 const showContent = ref(false)
@@ -57,7 +58,7 @@ const toggle = () => {
   justify-content: center;
   align-items: center;
   .chat-box-container {
-    width: calc(100% - 40px);
+    width: 100%;
     height: 100%;
     display: flex;
     color: #fff;

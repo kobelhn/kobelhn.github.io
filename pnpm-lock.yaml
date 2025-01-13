@@ -27,6 +27,9 @@ importers:
       vitepress-markdown-timeline:
         specifier: ^1.2.2
         version: 1.2.2
+      vitepress-protect-plugin:
+        specifier: ^1.0.6
+        version: 1.0.6(vite@5.4.11)
       vue:
         specifier: ^3.5.13
         version: 3.5.13
@@ -982,6 +985,11 @@ packages:
 
   vitepress-markdown-timeline@1.2.2:
     resolution: {integrity: sha512-eDFcvudmTW33pI7XdT+ZeUPvpc4CPXI0LZbsZZ54j36G56AN6qYEBiwZpDHl77E4QvqAIJMc8phXXvm7P/Lc+Q==}
+
+  vitepress-protect-plugin@1.0.6:
+    resolution: {integrity: sha512-4gO5NYNrAaD99+/5Qp/QPURTZC2MZ6UMl/gnxfBAIRasxw6r/mdjcluUNLxEFT8WUMX19KgGu4SSLFcKwfeBtQ==}
+    peerDependencies:
+      vite: ^2.0.0 || ^3.0.0 || ^4.0.0
 
   vitepress-sidebar@1.30.2:
     resolution: {integrity: sha512-5NWULe+lMGcair5z23Oapp4+sOSVwpUEj7s2JwZzb9T4pUbY6EumbSPZlY7q+h3vApnaYn4psVAzsalSKBJ/Xg==}
@@ -1971,6 +1979,10 @@ snapshots:
   vitepress-markdown-timeline@1.2.2:
     dependencies:
       dayjs: 1.11.13
+
+  vitepress-protect-plugin@1.0.6(vite@5.4.11):
+    dependencies:
+      vite: 5.4.11
 
   vitepress-sidebar@1.30.2:
     dependencies:

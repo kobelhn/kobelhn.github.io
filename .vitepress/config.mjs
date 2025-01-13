@@ -1,6 +1,7 @@
 import { defineConfig } from 'vitepress'
 import { withSidebar } from 'vitepress-sidebar'
 import timeline from "vitepress-markdown-timeline";
+import vitepressProtectPlugin from "vitepress-protect-plugin"
 
 const vitepressConfig = {
   base: '/pages/',
@@ -11,6 +12,15 @@ const vitepressConfig = {
   lang: 'zh-CN',
   head: [['link', { rel: 'icon', href: '/pages/favicon.ico' }]],
   srcDir: './docs',
+  vite: {
+    plugins: [
+      vitepressProtectPlugin({
+        disableF12: true, // 禁用F12开发者模式
+        disableCopy: true, // 禁用文本复制
+        disableSelect: true, // 禁用文本选择
+      }),
+    ],
+  },
   themeConfig: {
     nav: false,
     footer: false,

@@ -14,8 +14,8 @@
             ></iframe>
           </div>
           <div style="flex: 0.3; font-size: 12px; padding: 10px" @click.stop>
-            <encrypt-decrypt value="U2FsdGVkX1/bfrloCdg7s4U06f/BPizFXhUEUeAbF7+33OMMUfRu0vK0s/L7PNqwvKBHB34UF+y3JCsOD6Qf1ekiRUQPxh9N03+42qJRnlc=" label="API KEY 1" />
-            <encrypt-decrypt value="U2FsdGVkX19Ooxn0ZG8USBFunapcBNC3BiTqVvpvXX4MhnJRriNEF+5f1xZdd5jUD7KK8arsaw8g9QxLECNuWtJiYoGfWXYwuyLCsktbHbo=" label="API KEY 1" />
+            <encrypt-decrypt value="U2FsdGVkX1/bfrloCdg7s4U06f/BPizFXhUEUeAbF7+33OMMUfRu0vK0s/L7PNqwvKBHB34UF+y3JCsOD6Qf1ekiRUQPxh9N03+42qJRnlc=" />
+            <encrypt-decrypt value="U2FsdGVkX19Ooxn0ZG8USBFunapcBNC3BiTqVvpvXX4MhnJRriNEF+5f1xZdd5jUD7KK8arsaw8g9QxLECNuWtJiYoGfWXYwuyLCsktbHbo=" />
             <div>HOST1: https://api.chatanywhere.com.cn</div>
             <div>HOST2: https://api.chatanywhere.tech</div>
             <div>支持：gpt-3.5-turbo, embedding, gpt-4o-mini, gpt-4（每日限制 3 次）</div>

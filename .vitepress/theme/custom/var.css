@@ -1,13 +1,13 @@
 :root {
-    --vp-c-brand-1: #0ABAB5;
-    --vp-c-brand-2: #0AC7C2;
-    --vp-c-brand-3: #0AD4CF;
+    --vp-c-brand-1: #bd34fe;
+    --vp-c-brand-2: #a12be0;
+    --vp-c-brand-3: #d14eff;
 }
 
 .dark {
-    --vp-c-brand-1: #0AD4CF;
-    --vp-c-brand-2: #0AC7C2;
-    --vp-c-brand-3: #0ABAB5;
+    --vp-c-brand-1: #d14eff;
+    --vp-c-brand-2: #a12be0;
+    --vp-c-brand-3: #bd34fe;
 }
 /* 以前的vp-c-brand已弃用 */
 

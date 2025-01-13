@@ -1,25 +1,26 @@
 <template>
   <div class="secret-container">
-    <div class="secret-top">
-      <span style="margin-right: 10px">{{ label || 'Secret Content' }}</span>
+    <p class="secret-content" :class="{
+      decrypted: !!decryptedValue,
+    }" @click="showOperate = !showOperate" v-html="renderStr"></p>
+    <p class="secret-operate" v-if="!decryptedValue && showOperate">
       <input class="secret-input" v-model="password" type="password" placeholder="输入密码进行" />
       <button class="secret-btn" @click="decrypt">解密</button>
-    </div>
-    <div class="secret-content">{{ decryptedValue || encryptedValue }}</div>
+    </p>
   </div>
 </template>
 
 <script lang="ts" setup>
-import { ref } from 'vue'
+import { ref, computed } from 'vue'
 import CryptoJS from 'crypto-js'
 
 const props = defineProps<{
-  value: string,
-  label: string
+  value: string
 }>()
 
 const password = ref('')
 const decryptedValue = ref('')
+const showOperate = ref(false)
 
 const encryptedValue = ref(props.value)
 
@@ -27,42 +28,53 @@ const decrypt = () => {
   try {
     const bytes = CryptoJS.AES.decrypt(encryptedValue.value, password.value)
     decryptedValue.value = bytes.toString(CryptoJS.enc.Utf8)
+    if (!decryptedValue.value) {
+      throw new Error()
+    }
   } catch (e) {
-    alert('Decryption failed. Please check your password.')
+    alert('解密失败，请检查密码是否正确')
   }
 }
+
+const renderStr = computed(() => {
+  const text = decryptedValue.value || encryptedValue.value
+  if (!decryptedValue.value) {
+    return text + '<strong>加密内容（点击文字进行解密）</strong>'
+  }
+  return text
+})
 </script>
 
 <style scoped>
-.secret-container {
-  padding: 10px;
-  border: 2px solid #ccc;
-  border-radius: 4px;
-  margin: 10px 0;
-}
-.secret-top {
-  margin-bottom: 10px;
-}
 .secret-content {
-  padding: 5px;
-  line-height: 20px;
-  font-size: 14px;
+  opacity: 0.6;
   word-break: break-all;
-  user-select: none;
 }
-.secret-top .secret-input {
+
+.secret-content.decrypted {
+  opacity: 1;
+}
+.secret-operate {
+  display: flex;
+  align-items: center;
+}
+.secret-operate .secret-input {
   border: 1px solid #ccc;
-  padding: 5px;
+  padding: 2px 5px;
   margin-right: 5px;
-  min-width: 200px;
   border-radius: 4px;
+  font-size: 12px;
+  width: 90px;
+  background: #FFF;
+  color: #333;
 }
-.secret-top .secret-btn {
+.secret-operate .secret-btn {
   background: var(--vp-c-brand-1);
   color: #fff;
   border: none;
-  padding: 5px 10px;
+  padding: 2px 8px;
   border-radius: 4px;
   cursor: pointer;
+  font-size: 12px;
 }
 </style>

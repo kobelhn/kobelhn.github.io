@@ -71,6 +71,7 @@ export default defineConfig(withSidebar(vitepressConfig, {
   useTitleFromFrontmatter: true,
   useFolderTitleFromIndexFile: true,
   sortMenusByName: true,
-  sortFolderTo: 'top',
-  documentRootPath: '/docs'
+  sortFolderTo: 'bottom',
+  documentRootPath: '/docs',
+  excludeFilesByFrontmatterFieldName: 'exclude'
 }))

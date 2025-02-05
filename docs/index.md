@@ -9,7 +9,7 @@ hero:
     alt: VitePress Logo
   actions:
     - theme: brand
-      text: 祝您身体健康
+      text: 身体健康
       link: /program/
 features:
   - title: 不记录

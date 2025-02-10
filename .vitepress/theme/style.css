@@ -144,7 +144,7 @@
   }
 }
 
-/* 水波纹按钮 */
+/* 水波纹背景 */
 @keyframes ripple-animation {
   0% {
     background-position: 0% 50%;
@@ -158,17 +158,23 @@
 }
 
 /* Style the button with the ripple effect */
-.ripple-button {
-  padding: 5px 10px;
-  font-size: 12px;
-  color: white;
-  font-weight: bold;
+.ripple-bg {
+  line-height: 1.6 !important; /* 行高适中，阅读舒适 */
   border: none;
   border-radius: 5px;
-  background: linear-gradient(270deg, #292d32, #8534fe, #fd7c2c);
+  background: linear-gradient(270deg, #292d32, #bd34fe, #e43498);
   background-size: 600% 600%;
-  animation: ripple-animation 4s infinite;
+  animation: ripple-animation 3s infinite ease;
   cursor: pointer;
+}
+
+.ripple-bg.italic {
+  font-size: 1.2rem;
+  font-style: italic;
+  padding: 10px;
+  color: transparent;
+  background-clip: text;
+  font-family: '华文楷体';
 }
 
 .group:has([role='button']) .VPSidebarItem.level-0 .items {

@@ -4,7 +4,7 @@ import timeline from "vitepress-markdown-timeline";
 import vitepressProtectPlugin from "vitepress-protect-plugin"
 
 const vitepressConfig = {
-  base: '/pages/',
+  base: '/',
   title: "Markdown Memoirs",
   description: "Markdown Memoirs",
   appearance: 'dark',

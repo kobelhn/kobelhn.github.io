@@ -1,7 +1,7 @@
 ---
 layout: home
 hero:
-  name: LHN RTS Memoirs
+  name: RTS Memoirs By LHN
   text: Record, Think, Summarize
   tagline: 
   image:
@@ -9,7 +9,7 @@ hero:
     alt: VitePress Logo
   actions:
     - theme: brand
-      text: Start Journey
+      text: Start
       link: /program/
 features:
   - title: Not Record

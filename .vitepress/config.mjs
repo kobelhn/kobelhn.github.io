@@ -5,8 +5,8 @@ import vitepressProtectPlugin from "vitepress-protect-plugin"
 
 const vitepressConfig = {
   base: '/',
-  title: "Markdown Memoirs",
-  description: "Markdown Memoirs",
+  title: "LHN RTS Memoirs",
+  description: "LHN RTS Memoirs",
   appearance: 'dark',
   lastUpdated: false,
   lang: 'zh-CN',

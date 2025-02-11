@@ -133,7 +133,7 @@
  * Component: Algolia
  * -------------------------------------------------------------------------- */
 html,body {
-  font-family: Roboto, ZCOOL KuaiLe, Microsoft YaHei, sans-serif;
+  font-family: Atma, ZCOOL KuaiLe, Microsoft YaHei, sans-serif;
 }
 .DocSearch {
   --docsearch-primary-color: var(--vp-c-brand-1) !important;

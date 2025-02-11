@@ -132,7 +132,9 @@
 /**
  * Component: Algolia
  * -------------------------------------------------------------------------- */
-
+html,body {
+  font-family: Roboto, ZCOOL KuaiLe, Microsoft YaHei, sans-serif;
+}
 .DocSearch {
   --docsearch-primary-color: var(--vp-c-brand-1) !important;
 }
@@ -174,7 +176,6 @@
   padding: 10px;
   color: transparent;
   background-clip: text;
-  font-family: '华文楷体';
 }
 
 .group:has([role='button']) .VPSidebarItem.level-0 .items {

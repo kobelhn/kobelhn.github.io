@@ -72,6 +72,7 @@ export default defineConfig(withSidebar(vitepressConfig, {
   // https://vitepress-sidebar.cdget.com/guide/options
   collapsed: true,
   includeFolderIndexFile: true,
+  useFolderLinkFromIndexFile: true,
   useTitleFromFileHeading: true,
   useTitleFromFrontmatter: true,
   useFolderTitleFromIndexFile: true,

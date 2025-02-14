@@ -7,7 +7,6 @@ const vitepressConfig = {
   base: '/',
   title: "RTS Memoirs",
   description: "RTS Memoirs By LHN",
-  appearance: 'dark',
   lastUpdated: false,
   lang: 'zh-CN',
   head: [
